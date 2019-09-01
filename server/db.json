@@ -1,0 +1,23 @@
+{
+  "menu": [
+    {
+      "title": "Big Mac",
+      "id": 1,
+      "name": "big-mac",
+      "img": "thumb.Sdwch_BigMac.png"
+    },
+    {
+      "title": "Big Tasty",
+      "id": 2,
+      "name": "big-tasty",
+      "img": "thumb.Sdwch_BigTasty.png"
+    },
+    {
+      "title": "Big Double Cheeseburger",
+      "id": 3,
+      "name": "big-double-cheeseburger",
+      "img": "thumb.Sdwch_DoubleCheeseburger.png"
+    }
+
+  ]
+}
