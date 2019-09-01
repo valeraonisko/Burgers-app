@@ -1,17 +1,19 @@
 import {connect} from 'react-redux';
-import {clickOrder, clickBurger} from '../redux/actions';
+import {clickMenu, clickBurger, clickOrder} from '../redux/actions';
 import Header from './Header';
-import {selectBurgerSelected} from '../redux/selectors';
+import {selectPageNo, selectBurgerSelected} from '../redux/selectors';
 
 function mapStateToProps(state) {
   return {
+    pageNo: selectPageNo(state),
     burgerSelected: selectBurgerSelected(state)
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    clickBurger: () => dispatch(clickBurger()),
+    clickMenu: () => dispatch(clickMenu()),
+    clickBurger: (id) => dispatch(clickBurger(id)),
     clickOrder: () => dispatch(clickOrder())
   };
 };

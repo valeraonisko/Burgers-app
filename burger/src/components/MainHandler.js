@@ -1,14 +1,20 @@
 import {connect} from 'react-redux';
-import {loadMenu, clickBurger, clickOrder} from '../redux/actions';
+import {loadMenu, clickBurger, clickApplyBurger, clickCancelBurger,
+  clickAddOption, clickDecOption,
+  clickNewBurger, clickOrder, clickFinishOrder} from '../redux/actions';
 import Main from './Main';
-import {selectMenuMap, selectBurgerSelected, selectIsMenuLoaded, selectIsError, selectRequestError} from '../redux/selectors';
+import {selectPageNo, selectMenuMap, selectBurgerSelected, selectOptionsSelected, selectBurgerOrder,
+     selectIsMenuLoaded, selectIsError, selectRequestError} from '../redux/selectors';
 
 function mapStateToProps(state) {
   return {
+    pageNo: selectPageNo(state),
     isMenuLoaded: selectIsMenuLoaded(state),
     isError: selectIsError(state),
     menuMap: selectMenuMap(state),
     burgerSelected: selectBurgerSelected(state),
+    optionsSelected: selectOptionsSelected(state),
+    burgerOrder: selectBurgerOrder(state),
     requestError: selectRequestError(state)
   };
 };
@@ -16,7 +22,13 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     loadMenu: () => dispatch(loadMenu()),
-    clickBurger: () => dispatch(clickBurger(selectBurgerSelected.id)),
+    clickBurger: (id) => dispatch(clickBurger(id)),
+    clickAddOption: (code) => dispatch(clickAddOption(code)),
+    clickDecOption: (code) => dispatch(clickDecOption(code)),
+    clickApplyBurger: () => dispatch(clickApplyBurger()),
+    clickCancelBurger: () => dispatch(clickCancelBurger()),
+    clickNewBurger: () => dispatch(clickNewBurger()),
+    clickFinishOrder: () => dispatch(clickFinishOrder()),
     clickOrder: () => dispatch(clickOrder())
   };
 };

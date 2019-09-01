@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Card, CardTitle, CardImg, CardBody } from 'reactstrap';
 
 function MenuItem (props) {
-  const { title, id, name, img, clickBurger } = props;
+  const { title, id, img, clickBurger } = props;
   const imgSrc = `/burgers-img/${img}`;
   return (
     <Col className="m-4">
