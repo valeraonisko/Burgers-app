@@ -1,23 +1,61 @@
 {
   "menu": [
     {
-      "title": "Big Mac",
       "id": 1,
-      "name": "big-mac",
-      "img": "thumb.Sdwch_BigMac.png"
+      "title": "Big Mac",
+      "img": "thumb.Sdwch_BigMac.png",
+      "opts" : [
+          {
+            "code": "1-1",
+            "title": "Salsa",
+            "defqt": 1,
+            "maxqt": 5
+          },
+          {
+            "code": "1-2",
+            "title": "Bacon",
+            "defqt": 1,
+            "maxqt": 2
+          }
+      ]
     },
     {
-      "title": "Big Tasty",
       "id": 2,
-      "name": "big-tasty",
-      "img": "thumb.Sdwch_BigTasty.png"
+      "title": "Big Tasty",
+      "img": "thumb.Sdwch_BigTasty.png",
+      "opts" : [
+          {
+            "code": "2-1",
+            "title": "Salsa",
+            "defqt": 1,
+            "maxqt": 5
+          },
+          {
+            "code": "2-2",
+            "title": "Bacon",
+            "defqt": 1,
+            "maxqt": 2
+          }
+      ]
     },
     {
-      "title": "Big Double Cheeseburger",
       "id": 3,
-      "name": "big-double-cheeseburger",
-      "img": "thumb.Sdwch_DoubleCheeseburger.png"
+      "title": "Big Double Cheeseburger",
+      "img": "thumb.Sdwch_DoubleCheeseburger.png",
+      "opts" : [
+          {
+            "code": "3-1",
+            "title": "Salsa",
+            "defqt": 1,
+            "maxqt": 5
+          },
+          {
+            "code": "3-2",
+            "title": "Cheese",
+            "defqt": 1,
+            "maxqt": 2
+          }
+      ]
     }
-
   ]
 }
